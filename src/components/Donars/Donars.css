@@ -1,0 +1,10 @@
+img{
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.icon{
+  font-size: 22px;
+}
