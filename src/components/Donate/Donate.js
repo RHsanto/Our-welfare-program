@@ -15,8 +15,9 @@ const Donate = () => {
   },[])
 
 const addToCart = (donar)=>{
-  const newCart = [...cart,donar];
-   setCart(newCart)
+  if(!cart.includes(donar))
+   setCart([...cart,donar]);
+ 
 }
   return (
     <div className='donate-container d-flex'>
@@ -30,7 +31,9 @@ const addToCart = (donar)=>{
       }
      </div>
      <div className="cart-container">
-       <Cart cart={cart} ></Cart>
+       <Cart
+       cart={cart}
+        ></Cart>
      </div>
     </div>
   );

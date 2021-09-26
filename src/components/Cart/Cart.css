@@ -2,3 +2,7 @@
   width: 100%;
   margin: 70px 0px 70px 30px;
 } 
+
+ li{
+  list-style: none;
+}

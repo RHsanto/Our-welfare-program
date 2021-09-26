@@ -1,27 +1,38 @@
-import React from 'react';
+import React  from 'react';
+import Person from '../Person/Person';
 import './Cart.css'
 
 const Cart = (props) => {
-  const {cart} = props ;
-  
+  const {cart} = props;
+ 
+
   let total = 0;
-  let name = ''
-  for(const donar in cart){
+  for(const donar of cart){
     total= total + donar.donate;
-    name = donar.name;
-  }
-  return (
-    <div>
-  <div class="card cart bg-light ">
-  <div class="card-body">
     
-<h4>Total Doners : {props.cart.length} </h4>
-<h5>Total Amount : ${total}</h5>
-<h5>Total Amount : {name}</h5>
-  </div>
-  
+  }
+
+
+  return (
+    <div >
+    <div className=" card cart bg-light  ">
+    <div className="card-body">
+   <h4>Total Donars : {props.cart.length} </h4>
+  <div>
+  {
+    cart.map(person =><Person
+    key={person.key}
+    person={person}
+    ></Person>
+      )
+  }
+
 </div>
-    </div>
+<h5>Total Amount : ${total}</h5>
+</div>
+
+  </div>
+</div>
   );
 };
 
