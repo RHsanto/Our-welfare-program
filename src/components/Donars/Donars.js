@@ -4,10 +4,9 @@ import { faHandHoldingUsd } from '@fortawesome/free-solid-svg-icons'
 import './Donars.css'
 const Donars = (props) => {
 
-  
-
-
+  //destructuring all donars information
   const{name,img,age,email,city,country,donate} = props.donar
+  // get font awesome icon
   const element = <FontAwesomeIcon className='icon' icon={faHandHoldingUsd} />
   return (
     <div>
@@ -21,6 +20,8 @@ const Donars = (props) => {
        <h6> City   : {city}</h6>
        <h6> Country : {country}</h6>
        <h6> Donate : ${donate}</h6>
+       
+       {/* add onclick */}
        <button onClick={()=>props.addToCart(props.donar)}  type="button" className="btn btn-warning my-2 "> {element} add to cart</button>
       </div>
     </div>
