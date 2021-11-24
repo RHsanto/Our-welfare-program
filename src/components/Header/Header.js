@@ -4,8 +4,8 @@ import './Header.css'
 const Header = () => {
   return (
     <div>
-      {/* header part */}
-      <div className="containe w-75 mx-auto shadow m-2">
+      {/* header part start */}
+      <div className="container w-75 mx-auto shadow m-2">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
    <div className="container-fluid">
 
